@@ -1,14 +1,29 @@
-## docker-compose的lnmp环境编排
-环境： Redis3.1+PHP5.6-fpm+Nginx+Mysql5.7
+## 系统架构图
+![](./docs/docker架构图.png)
+![](./docs/系统拓扑图.png)
+![](./docs/sshserver流程图.png)
+
+
+## 包含容器
+- php容器
+- nginx容器
+- maven容器
+- jenkins容器
+- redis容器
+- node容器
+- mysql容器
+
 ## Author@   Godtoy
+
 
 ## Usage
 1.git clone ${url}
 
 2.docker-compose up --build
 
-## 第一次需要手动导入测试数据
 
+
+## 第一次需要手动导入测试数据
 
 
 1.查看docker-compose 网络
@@ -26,23 +41,20 @@ eb94c90c4aae        30goinghome_default   bridge              local
 2.查看backup真实路径
 ```
 $ pwd
-/c/Users/zhaojunlike/Documents/WorkSpace/PHP/30-going-home
 ```
 
 3.导入默认得数据
-
 //启动一个迁移数据容器
 ```shell
-$ docker run -it --link mysql-db:mysql --network 30goinghome_default -v `pwd`/data/backup:/data/backup:ro --rm mysql:5.7 sh -c 'exec mysql -h"mysql" -P"3306" -uroot -p"zhaojun" package_v1</data/backup/default.sql'docker run -it --link mysql-db:mysql --network 30goinghome_default -v `pwd`/data/backup:/data/backup:ro --rm mysql:5.7 sh -c 'exec mysql -h"mysql" -P"3306" -uroot -p"zhaojun" package_v1</data/backup/default.sql'
+$ docker run -it --link mysql-db:mysql --network ${network} -v `pwd`/data/backup:/data/backup:ro --rm mysql:5.7 sh -c 'exec mysql -h"mysql" -P"3306" -uroot -p"zhaojun" package_v1</data/backup/default.sql'docker run -it --link mysql-db:mysql --network 30goinghome_default -v `pwd`/data/backup:/data/backup:ro --rm mysql:5.7 sh -c 'exec mysql -h"mysql" -P"3306" -uroot -p"zhaojun" package_v1</data/backup/default.sql'
 ```
 
 
 
 ## 开发
 
-项目入口文件放到app/webroot/Public/下
-
-
 ## 线上环境
 
 ## 持续集成和持续交付
+
+## 预览
