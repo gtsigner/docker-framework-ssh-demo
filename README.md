@@ -13,6 +13,12 @@
 - node容器
 - mysql容器
 
+## 包含模块子项目
+- 爬虫模块Node（https://github.com/zhaojunlike/nodejs-meizitu）
+- php前台页面渲染模块
+- javaEE服务端模块（struct2+spring+hibernate）
+
+
 ## Author@   Godtoy
 
 
