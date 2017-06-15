@@ -1,0 +1,4 @@
+<Context path="www.blog.me" docBase="/app/jwebroot/target" debug="1" reloadable="true"
+         autoDeploy="true"
+         privileged="true">
+</Context>

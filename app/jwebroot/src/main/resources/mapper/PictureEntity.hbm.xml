@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.oeynet.godtoy.entites.PictureEntity" table="ey_picture">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="tag_id" type="java.lang.Integer">
+            <column name="tag_id" sql-type="int(11)" default="0"/>
+        </property>
+        <property name="document_id" type="java.lang.Integer">
+            <column name="document_id" sql-type="INT(11)" default="0"/>
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description" sql-type="varchar(255)" default="''"/>
+        </property>
+        <property name="keywords" type="java.lang.String">
+            <column name="keywords" sql-type="varchar(255)" default="''"/>
+        </property>
+        <property name="loacal_path" type="java.lang.String">
+            <column name="loacal_path" sql-type="varchar(255)" default="''"/>
+        </property>
+        <property name="remote_url" type="java.lang.String">
+            <column name="remote_url" sql-type="varchar(255)" default="''"/>
+        </property>
+        <property name="remote_id" type="java.lang.Integer">
+            <column name="remote_id" sql-type="int(11)" default="0"/>
+        </property>
+        <property name="create_time" type="java.lang.Integer">
+            <column name="create_time" sql-type="int(11)" default="0"/>
+        </property>
+        <property name="update_time" type="java.lang.Integer">
+            <column name="update_time" sql-type="int(11)" default="0"/>
+        </property>
+
+        <property name="status" type="java.lang.Integer">
+            <column name="status" sql-type="tinyint(3)" default="0"/>
+        </property>
+    </class>
+</hibernate-mapping>
